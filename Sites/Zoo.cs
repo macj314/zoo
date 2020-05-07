@@ -1,23 +1,34 @@
+using System;
+using System.Collections.Generic;
+
 namespace Zoo.Sites
 {
-  public class Enclosures
+  public class Enclosure
   {
-    public string Species { get; set; }
-    public string Name { get; set; }
-    public int Age { get; set; }
-    public Enclosures(string species, string name, int age)
+    public string eName {get; set;}
+    public Enclosure(string ename)
     {
-      Species = species;
-      Name = name;
-      Age = age;
+      EName = ename;
     }
-    public string DisplayAnimal()
+    public Dictionary<Animal> fillEnclosure()
     {
-      return "Species: " + Species + ", Name: " + Name + ", Age: " + Age;
-    }
-    public class Animal
-    {
-
+      
     }
   }
+  public class Animal
+    {
+      public string Species { get; set; }
+      public string Name { get; set; }
+      public int Age { get; set; }
+      public Animal(string species, string name, int age)
+      {
+        Species = species;
+        Name = name;
+        Age = age;
+      }
+      public string DisplayAnimal()
+      {
+        return "Species: " + Species + ", Name: " + Name + ", Age: " + Age;
+      }
+    }
 }
